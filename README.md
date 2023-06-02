@@ -51,6 +51,8 @@ After setting the desired configurations, there are 2 ways to train the model.
         from utils import main
         main()
 
+## Visualise model training performance
+The notebook provides a direct visual on the model performance over each epoch using a graph. The graph can be accessed
 
 ## License
 
