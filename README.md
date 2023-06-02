@@ -38,25 +38,16 @@ The project is structured as follows:
 
 ## License
 
-This project is licensed under the None License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under No License and is free to be used and experimented with.
 
 ## Acknowledgements
 
-This project was inspired by the MNIST dataset and PyTorch examples.
+This project is an assignment for The School of AI and drew its inspiration from Pytorch, MNIST dataset and the goal of scoring 400 points on this assignment.
 
 ## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please create a GitHub issue or submit a pull request.
+Contributions and corrections are welcome! If you find any issues, please create a GitHub issue.
 
 ## Contact
 
-For any questions or inquiries, feel free to contact [your_email@example.com](mailto:your_email@example.com).
-
-Feel free to customize the README.md file to match your project's specifics, such as adding more details about the model architecture, data transformations, or any additional information you'd like to include.
-
-
-
-
-
-
-Regenerate response
+For any questions or inquiries, feel free to contact [vikrantsinghchatole@gmail.com](mailto:vikrantsinghchatole@gmail.com).
