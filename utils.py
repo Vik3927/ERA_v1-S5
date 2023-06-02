@@ -5,6 +5,7 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import Dataset
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 from model import Net
 
 
@@ -104,19 +105,32 @@ def test(model, device, test_loader):
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
+def plot_metrics():
+    fig, axs = plt.subplots(2,2,figsize=(15,10))
+    axs[0, 0].plot(train_losses)
+    axs[0, 0].set_title("Training Loss")
+    axs[1, 0].plot(train_acc)
+    axs[1, 0].set_title("Training Accuracy")
+    axs[0, 1].plot(test_losses)
+    axs[0, 1].set_title("Test Loss")
+    axs[1, 1].plot(test_acc)
+    axs[1, 1].set_title("Test Accuracy")
+    plt.savefig('metrics_accuracy.png')
 
 def main():
     model = Net().to(device)
     train_loader, test_loader = create_dataloader(32)
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=15, gamma=0.1, verbose=True)
-    num_epochs = 20
+    num_epochs = 2
 
     for epoch in range(1, num_epochs+1):
         print(f'Epoch {epoch}')
         train(model, device, train_loader, optimizer)
         test(model, device, test_loader)
         scheduler.step()
+    
+    plot_metrics()
 
 if __name__ == "__main__":
    main()

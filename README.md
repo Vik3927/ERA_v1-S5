@@ -1,4 +1,4 @@
-# ERA_v1-S5
+# S5 - modularised CNN training
 This project trains a neural network on the MNIST dataset using PyTorch.
 
 ## Project Structure
@@ -19,12 +19,11 @@ The project is structured as follows:
 
 1. Clone the repository:
 
-`git clone https://github.com/Vik3927/ERA_v1-S5.git`
+        git clone https://github.com/Vik3927/S5-modularised-CNN-training.git
 
 2. Install the required dependencies:
 
-`pip install torch torchvision`
-
+        pip install torch torchvision
 
 
 ## Usage
@@ -35,6 +34,23 @@ The project is structured as follows:
 `python utils.py`
 
 3. The training will start, and you will see the loss for each epoch printed in the console. After training, the script will display the test accuracy.
+
+
+## EDA
+The notebook can be used for a visual EDA on the dataset. Use `Code block 6` in the `MNIST_build_and_run.ipynb` notebook to plot multiple frames from the dataset at once.
+The `num_frames` can be configured to see the desired number of frames at once.
+
+## Train
+After setting the desired configurations, there are 2 ways to train the model.
+1. Simply run 
+
+        python utils.py
+
+2. Import `utils.py` as a module in your notebook using
+
+        from utils import main
+        main()
+
 
 ## License
 
