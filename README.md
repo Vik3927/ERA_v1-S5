@@ -7,7 +7,7 @@ The project is structured as follows:
 
 - `model.py`: Contains the definition of the custom model.
 - `utils.py`: Contains utility functions for data loading, training, and evaluation.
-- `MNIST_build_and_train.ipynb`: Provides step by step insight into the pipeline and a playground to train the model on and experiment with it.
+- `S5.ipynb`: Provides step by step insight into the pipeline and a playground to train the model on and experiment with it.
 
 ## Requirements
 
@@ -37,12 +37,12 @@ The project is structured as follows:
 
 
 ## EDA
-The notebook can be used for a visual EDA on the dataset. Use `Code block 6` in the `MNIST_build_and_run.ipynb` notebook to plot multiple frames from the dataset at once.
+The notebook can be used for a visual EDA on the dataset. Use `Code block 6` in the `S5.ipynb` notebook to plot multiple frames from the dataset at once.
 The `num_frames` can be configured to see the desired number of frames at once.
 
 ## Train
 After setting the desired configurations, there are 2 ways to train the model.
-1. Simply run 
+1. Simply run the following command in terminal
 
         python utils.py
 
@@ -51,8 +51,14 @@ After setting the desired configurations, there are 2 ways to train the model.
         from utils import main
         main()
 
-## Visualise model training performance
-The notebook provides a direct visual on the model performance over each epoch using a graph. The graph can be accessed
+## Visualize model training performance
+The model training metrics can be viewed in both forms of training. 
+
+### For notebook training
+Run the last cell after code block 9 to plot the accuracy under training.
+
+### For training from terminal
+Soon as the training is completed an image, with the same metrics, titled `metrics_accuracy.png` is stored in the directory.
 
 ## License
 
